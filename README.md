@@ -3,7 +3,7 @@ Overview
 This script simulates account number enumeration against the 
 TNB QuickPay service. It queries a sequence of caNumber values 
 and checks whether the backend responds with a redirection 
-containing a valid PremiseAddress.
+containing a valid PremiseAddress and also there is a vulnerability that can be exploited from the page. 😉
 
 Requirements
 ------------
