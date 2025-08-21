@@ -40,6 +40,21 @@ Behavior
 4. Parses for /PayVerify redirects and extracts PremiseAddress.
 5. Prints results in format: <caNumber> -> <PremiseAddress>
 
+Rate Limiting
+-------------
+This script does not implement any form of rate limiting, backoff,
+or throttling. 
+
+If you run it against a live system, you may encounter:
+- HTTP 429 (Too Many Requests)
+- Temporary blocking by the server
+- Connection resets
+- HTTP 420 (Skill issue)
+
+👉 You are expected to handle rate limiting on your own
+   (e.g., by adding `time.sleep()`, randomized delays, 
+   exponential backoff, or proxy rotation).
+
 Notes
 -----
 - Dont forget to read all files 😃
